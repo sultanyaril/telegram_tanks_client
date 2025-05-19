@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styles from "./App.module.css"
-import MainMenu from "./components/MainMenu";
+import MainMenu from "./pages/MainMenu";
+import Game from "./pages/Game/";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <div className={ styles.App }>
           <Routes>
             <Route path="/" element={<MainMenu />} />
+            <Route path="/game" element={<Game />} />
           </Routes>
         </div>
       </BrowserRouter>

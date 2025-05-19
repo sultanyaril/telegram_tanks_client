@@ -1,0 +1,15 @@
+/game ->
+{
+    walls:
+        [
+            {x,y,length,direction,width},
+            {x,y,length,direction,width},
+            ...
+        ],
+    tanks:
+        [
+            {x,y,direction,userId},
+            {x,y,direction,userId},
+            ...
+        ],
+}

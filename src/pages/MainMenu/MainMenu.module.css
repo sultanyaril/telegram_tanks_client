@@ -1,0 +1,23 @@
+.MainMenu {
+    height: 400px;
+    width: 800px;
+    border: 2px solid black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Title {
+    font-size: 80px;
+    margin: 20px;
+}
+
+.Options {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.Options:hover {
+    color: white;
+    cursor: pointer;
+}
