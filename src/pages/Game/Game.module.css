@@ -1,23 +1,16 @@
-.MainMenu {
-    height: 400px;
-    width: 800px;
-    border: 2px solid black;
+.Game {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-.Title {
-    font-size: 80px;
-    margin: 20px;
-}
-
-.Options {
-    font-size: 30px;
-    margin: 10px;
-}
-
-.Options:hover {
-    color: white;
-    cursor: pointer;
+.GameCanvas {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    /* TODO: use direct path */
+    background: url("../../../public/grass.png") repeat;
 }

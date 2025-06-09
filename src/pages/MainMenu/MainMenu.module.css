@@ -1,7 +1,7 @@
 .MainMenu {
-    height: 400px;
-    width: 800px;
-    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
