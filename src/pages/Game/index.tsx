@@ -22,7 +22,7 @@ function Game() {
             pressedKeys.delete(event.key.toLowerCase());
         };
 
-        const loop = () => {
+        const update = () => {
             const session = gameSessionRef.current;
             if (session) {
                 if (pressedKeys.has("w")) session.moveTank("forward");
@@ -30,18 +30,17 @@ function Game() {
                 if (pressedKeys.has("a")) session.moveTank("turn_left");
                 if (pressedKeys.has("d")) session.moveTank("turn_right");
                 if (pressedKeys.has(" ")) session.moveTank("fire");
-                gameSession.drawMap();
+                session.drawMap();
             }
-
-            requestAnimationFrame(loop);
         };
+
+        const interval = setInterval(update, 10); // every 0.1 second
 
         window.addEventListener("keydown", handleKeyDown);
         window.addEventListener("keyup", handleKeyUp);
 
-        requestAnimationFrame(loop);
-
         return () => {
+            clearInterval(interval);
             window.removeEventListener("keydown", handleKeyDown);
             window.removeEventListener("keyup", handleKeyUp);
         };
